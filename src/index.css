@@ -134,6 +134,41 @@ All colors MUST be HSL.
     }
   }
   
+  /* Parallax Effects */
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Enhanced Hover Effects */
+  .hover-glow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-glow:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px hsl(var(--cyber-blue) / 0.3);
+  }
+  
+  /* Grid Animation */
+  .grid-animate {
+    background-image: linear-gradient(hsl(var(--cyber-blue) / 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, hsl(var(--cyber-blue) / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-move 20s linear infinite;
+  }
+  
+  @keyframes grid-move {
+    0% {
+      background-position: 0 0, 0 0;
+    }
+    100% {
+      background-position: 50px 50px, 50px 50px;
+    }
+  }
+  
   .scan-line {
     position: relative;
     overflow: hidden;
