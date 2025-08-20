@@ -241,9 +241,9 @@ export default function QuoteForm() {
                     <Button 
                       type="submit" 
                       size="lg"
-                      className="w-full bg-cyber hover:bg-cyber-glow text-background font-exo font-semibold glow-cyber pulse-cyber"
+                      className="w-full bg-cyber hover:bg-cyber-glow text-background text-white font-exo font-semibold glow-cyber pulse-cyber"
                     >
-                      <Send className="w-5 h-5 mr-2" />
+                      <Send className="w-5 h-5 mr-2  " />
                       Submit Secure Quote Request
                     </Button>
                   </form>

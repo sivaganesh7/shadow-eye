@@ -22,7 +22,7 @@ export default function HeroSection() {
             <div className="space-y-4">
               <div className="flex items-center space-x-2 text-cyber-blue">
                 <Shield className="w-6 h-6" />
-                <span className="font-exo text-sm font-medium tracking-wider uppercase">
+                <span className="font-exo text-lg font-medium tracking-wider uppercase">
                   Innosquare Defense Technologies
                 </span>
               </div>
@@ -31,7 +31,7 @@ export default function HeroSection() {
                 <span className="text-cyber">SHADOW</span>
                 <span className="text-foreground">EYE</span>
                 <br />
-                <span className="text-neon text-4xl lg:text-5xl">SENTINEL</span>
+                {/* <span className="text-neon text-4xl lg:text-5xl">SENTINEL</span> */}
               </h1>
               
               <p className="text-xl lg:text-2xl text-muted-foreground font-exo leading-relaxed">

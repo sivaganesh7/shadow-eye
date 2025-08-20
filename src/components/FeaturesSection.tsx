@@ -19,12 +19,7 @@ const features = [
     description: "Extendable robotic arm with precision handling capabilities for explosive ordnance disposal",
     color: "text-destructive"
   },
-  {
-    icon: Plane,
-    title: "Drone Integration",
-    description: "Seamlessly syncs with mini surveillance drones for comprehensive aerial and ground coverage",
-    color: "text-cyber"
-  },
+
   {
     icon: Satellite,
     title: "Multi-Sensor Fusion",
@@ -38,22 +33,10 @@ const features = [
     color: "text-cyber"
   },
   {
-    icon: Battery,
-    title: "Self-Charging Docking",
-    description: "Automatically returns to base for charging when battery levels reach preset thresholds",
-    color: "text-neon"
-  },
-  {
     icon: Lock,
     title: "Encrypted Communications",
     description: "Military-grade AES-256 encryption ensures secure data transfer and command protocols",
     color: "text-destructive"
-  },
-  {
-    icon: Mic,
-    title: "Voice Command Control",
-    description: "Natural language processing allows soldiers to control via simple voice commands",
-    color: "text-cyber"
   },
   {
     icon: Package,
