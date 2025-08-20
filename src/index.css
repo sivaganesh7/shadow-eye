@@ -8,81 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Military Cyber Theme Colors */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 160 30% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 160 30% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 160 45% 15%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 160 20% 12%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 160 15% 10%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 100% 50%;
+    --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 160 20% 15%;
+    --input: 160 20% 12%;
+    --ring: 195 100% 50%;
 
-    --radius: 0.5rem;
+    /* Custom Military Theme Variables */
+    --military-green: 160 45% 15%;
+    --military-green-dark: 160 50% 8%;
+    --military-green-light: 160 40% 25%;
+    --cyber-blue: 195 100% 50%;
+    --cyber-blue-glow: 195 100% 60%;
+    --jet-black: 0 0% 4%;
+    --steel-gray: 0 0% 20%;
+    --neon-green: 120 100% 50%;
 
-    --sidebar-background: 0 0% 98%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--military-green-dark)), hsl(var(--military-green)));
+    --gradient-cyber: linear-gradient(135deg, hsl(var(--cyber-blue)), hsl(var(--cyber-blue-glow)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)) / 0.8, hsl(var(--military-green-dark)) / 0.6);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 30px hsl(var(--cyber-blue) / 0.3);
+    --shadow-military: 0 10px 40px hsl(var(--military-green) / 0.4);
+    --shadow-intense: 0 0 50px hsl(var(--cyber-blue) / 0.5);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Military theme works primarily as dark theme */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +82,76 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Military Theme Utilities */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .cyber-gradient {
+    background: var(--gradient-cyber);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+    backdrop-filter: blur(10px);
+  }
+  
+  .glow-cyber {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-intense {
+    box-shadow: var(--shadow-intense);
+  }
+  
+  .text-cyber {
+    color: hsl(var(--cyber-blue));
+  }
+  
+  .text-neon {
+    color: hsl(var(--neon-green));
+  }
+  
+  .border-cyber {
+    border-color: hsl(var(--cyber-blue));
+  }
+  
+  /* Animations */
+  .pulse-cyber {
+    animation: pulse-cyber 2s infinite;
+  }
+  
+  @keyframes pulse-cyber {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--cyber-blue) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--cyber-blue) / 0.8);
+    }
+  }
+  
+  .scan-line {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scan-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--cyber-blue)), transparent);
+    animation: scan 3s infinite;
+  }
+  
+  @keyframes scan {
+    0% { left: -100%; }
+    100% { left: 100%; }
   }
 }

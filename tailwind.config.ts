@@ -18,7 +18,23 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'orbitron': ['Orbitron', 'monospace'],
+				'exo': ['Exo 2', 'sans-serif'],
+			},
 			colors: {
+				'military-green': {
+					DEFAULT: 'hsl(var(--military-green))',
+					dark: 'hsl(var(--military-green-dark))',
+					light: 'hsl(var(--military-green-light))',
+				},
+				'cyber-blue': {
+					DEFAULT: 'hsl(var(--cyber-blue))',
+					glow: 'hsl(var(--cyber-blue-glow))',
+				},
+				'jet-black': 'hsl(var(--jet-black))',
+				'steel-gray': 'hsl(var(--steel-gray))',
+				'neon-green': 'hsl(var(--neon-green))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
